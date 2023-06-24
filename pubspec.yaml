@@ -42,7 +42,6 @@ dependencies:
   gallery_saver: ^2.3.2
   random_string: ^2.3.1
   flutter_native_splash: ^2.3.1
-  google_mobile_ads: ^3.0.0  
 
 flutter_native_splash:
   image: assets/image/wallpaperhub.png

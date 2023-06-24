@@ -54,32 +54,33 @@ class _CategoriesScreenViewState extends State<CategoriesScreenView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          title: brandName(),
-          centerTitle: true,
-          elevation: 0.0,
-        ),
-        body: Stack(
-          children: [
-            SingleChildScrollView(
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 20.0.h,
-                  ),
-                  wallpaperList(wallpapers = wallpapers, context = context),
-                ],
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: brandName(),
+        centerTitle: true,
+        elevation: 0.0,
+      ),
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 20.0.h,
+                ),
+                wallpaperList(wallpapers = wallpapers, context = context),
+              ],
+            ),
+          ),
+          if (isLoading)
+            Container(
+              color: Colors.white60,
+              child: const Center(
+                child: CircularProgressIndicator(),
               ),
             ),
-            if (isLoading)
-              Container(
-                color: Colors.white60,
-                child: const Center(
-                  child: CircularProgressIndicator(),
-                ),
-              ),
-          ],
-        ));
+        ],
+      ),
+    );
   }
 }
